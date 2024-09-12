@@ -52,24 +52,24 @@ h6 {
 
 @font-face {
     font-family: 'poppinsregular';
-    src: url('src/fonts/poppins-regular-webfont.woff2') format('woff2'),
-        url('src/fonts/poppins-regular-webfont.woff') format('woff');
+    src: url('/fonts/poppins-regular-webfont.woff2') format('woff2'),
+        url('/fonts/poppins-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'merriweatherregular';
-    src: url('src/fonts/merriweather-regular-webfont.woff2') format('woff2'),
-        url('src/fonts/merriweather-regular-webfont.woff') format('woff');
+    src: url('/fonts/merriweather-regular-webfont.woff2') format('woff2'),
+        url('/fonts/merriweather-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'montserratthin';
-    src: url('src/fonts/montserrat-variablefont_wght-webfont.woff2') format('woff2'),
-        url('src/fonts/montserrat-variablefont_wght-webfont.woff') format('woff');
+    src: url('/fonts/montserrat-variablefont_wght-webfont.woff2') format('woff2'),
+        url('/fonts/montserrat-variablefont_wght-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -82,8 +82,8 @@ h6 {
 }
 
 body {
-    background-image: url('/src/images/Dark_BG_3.jpg');
-    background-repeat: no-repeat;
+    background-image: url('/images/Dark_BG_3.jpg');
+    /* background-repeat: no-repeat; */
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -101,10 +101,32 @@ footer {
     padding: 1vh 1vw 1vh 1vw;
     align-items: center;
     font-family: 'poppinsregular', sans-serif;
+    flex-shrink: 0;
+}
+
+nav {
+    display: flex;
+    /* Ias this needed? */
 }
 
 header {
     height: 10vh;
+}
+
+button {
+    background-color: var(--teal);
+    color: white;
+    font-family: 'poppinsregular', sans-serif;
+    margin-right: 0.5vw;
+    border: var(--red) 2px solid;
+    border-radius: 5px;
+    padding: 0.5vh 2vw;
+}
+
+button:hover {
+    background-color: var(--red);
+    border: var(--teal) 2px solid;
+    color: var(--brown);
 }
 
 footer {
@@ -124,14 +146,23 @@ footer {
     width: 100%;
     border-radius: 25px;
     border: var(--yellow) 2px solid;
-    display: grid;
+    /* display: grid; */
+    align-items: center;
+    justify-items: center;
 
-    /* This grid setup is for the cards */
+    /* Padding for all types? */
+    padding: 2vh 2vw;
+    
+    /* This grid setup is for the cards - 2 columns */
     /* grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 3fr 1fr; */
 
-    /* This grid setup is for the Home div */
-    grid-template-rows: 1fr 4fr 1fr;
+    /* This grid setup is for the Home div - This would work for the about us section (maybe) */
+    /* grid-template-rows: 1fr 4fr 1fr; */
+
+    /* Turns out that this section (homepage needs to be flex! */
+    display: flex;
+    flex-direction: column;
 }
 
 /* .card_img {
@@ -140,7 +171,7 @@ footer {
 }
 
 .card_title {
-    font-family: 'poppinsregular', sans-serif;
+    font-family: 'poppinsregular', sangs-serif;
 } */
 
 /* Next job is to test the home layout */
@@ -148,4 +179,9 @@ footer {
 .home_title {
     font-family: 'poppinsregular', sans-serif;
     border-bottom: var(--yellow 1px solid);
+}
+
+.home_img {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
