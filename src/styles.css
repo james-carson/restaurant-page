@@ -113,6 +113,10 @@ header {
     height: 10vh;
 }
 
+h1 {
+    font-weight: 800;
+}
+
 button {
     background-color: var(--teal);
     color: white;
@@ -127,6 +131,7 @@ button:hover {
     background-color: var(--red);
     border: var(--teal) 2px solid;
     color: var(--brown);
+    cursor: pointer;
 }
 
 footer {
@@ -137,7 +142,7 @@ footer {
 #content {
     color: white;
     flex-grow: 1;
-    padding: 10vh 20vw 10vh 20vw;
+    padding: 5vh 20vw 5vh 20vw;
 }
 
 #temp_div {
@@ -181,7 +186,29 @@ footer {
     border-bottom: var(--yellow 1px solid);
 }
 
+h2 {
+    font-size: 2em;
+}
+
 .home_img {
-    margin-top: 2vh;
+    margin-top: 1vh;
     margin-bottom: 2vh;
+}
+
+.home_text {
+    margin: 2vh 2vw;
+}
+
+#footer_right {
+    display: flex;
+}
+
+.icon {
+    max-height: 3vh;
+    margin-right: 0.5vw;
+    filter: brightness(0) saturate(100%) invert(36%) sepia(52%) saturate(4224%) hue-rotate(334deg) brightness(92%) contrast(97%);
+}
+
+.icon:hover {
+    filter: brightness(0) saturate(100%) invert(48%) sepia(98%) saturate(317%) hue-rotate(123deg) brightness(90%) contrast(86%);
 }
