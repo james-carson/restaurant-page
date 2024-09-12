@@ -134,13 +134,18 @@ footer {
     grid-template-rows: 1fr 4fr 1fr;
 }
 
-.card_img {
+/* .card_img {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
 }
 
 .card_title {
     font-family: 'poppinsregular', sans-serif;
-}
+} */
 
 /* Next job is to test the home layout */
+
+.home_title {
+    font-family: 'poppinsregular', sans-serif;
+    border-bottom: var(--yellow 1px solid);
+}
