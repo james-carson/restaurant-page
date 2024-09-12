@@ -92,6 +92,27 @@ body {
     font-family: 'merriweatherregular', serif;
 }
 
+/* General styling */
+
+button {
+    font-family: 'poppinsregular', sans-serif;
+    border-radius: 5px;
+    padding: 0.5vh 2vw;
+    color: white;
+    border: var(--red) 2px solid;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 2em;
+    font-family: 'poppinsregular', sans-serif;
+}
+
+/* Styling for the header and footer contents */
+
 header,
 footer {
     background-color: var(--yellow);
@@ -113,32 +134,20 @@ header {
     height: 10vh;
 }
 
-button {
+.header_button {
     background-color: var(--teal);
-    color: white;
-    font-family: 'poppinsregular', sans-serif;
     margin-right: 0.5vw;
-    border: var(--red) 2px solid;
-    border-radius: 5px;
-    padding: 0.5vh 2vw;
 }
 
-button:hover {
+.header_button:hover {
     background-color: var(--red);
     border: var(--teal) 2px solid;
     color: var(--brown);
-    cursor: pointer;
 }
 
 footer {
     justify-self: end;
     height: 5vh;
-}
-
-#content {
-    color: var(--brown);
-    flex-grow: 1;
-    padding: 5vh 20vw 5vh 20vw;
 }
 
 #footer_right {
@@ -155,31 +164,47 @@ footer {
     filter: brightness(0) saturate(100%) invert(48%) sepia(98%) saturate(317%) hue-rotate(123deg) brightness(90%) contrast(86%);
 }
 
-/* The below styles work for the home/about page - some will need to be taken out of #temp_div as they will apply to other layouts, eg the grid layouts */
+/* Styling for the main content */
 
-#temp_div {
+#content {
+    color: var(--brown);
+    flex-grow: 1;
+    padding: 5vh 20vw 5vh 20vw;
+}
+
+/* styling for the menu section */
+
+#menu_div {
+    /* Temporary for outlining: */
+    /* outline: 1px solid white; */
     background-color: var(--teal);
     height: 100%;
     width: 100%;
     border-radius: 25px;
     border: var(--yellow) 2px solid;
-    /* display: grid; */
-    align-items: center;
-    justify-items: center;
-
-    /* Padding for all types? */
     padding: 2vh 2vw;
-
-    /* This grid setup is for the cards - 2 columns */
-    /* grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr; */
-
-    /* This grid setup is for the Home div - This would work for the about us section (maybe) */
-    /* grid-template-rows: 1fr 4fr 1fr; */
-
-    /* Turns out that this section (homepage needs to be flex! */
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+#menu_title {
+    color: white;
+}
+
+#menu_buttons {
+    margin-bottom: 2vh;
+}
+
+.menu_button {
+    background-color: var(--yellow);
+    color: var(--brown);
+}
+
+.menu_button:hover {
+    background-color: var(--red);
+    border: var(--yellow) 1px solid;
+    color: white
 }
 
 /* .card_img {
@@ -191,20 +216,60 @@ footer {
     font-family: 'poppinsregular', sangs-serif;
 } */
 
-.home_title {
+
+
+
+/* These lines go inside container divs for certain grids */
+
+    /* This grid setup is for the cards - 2 columns */
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr; */
+
+    /* This grid setup is for the Home div - This would work for the about us section (maybe) */
+    /* grid-template-rows: 1fr 4fr 1fr; */
+
+
+
+
+
+/* The below styles work for the home/about page - some will need to be taken out of #temp_div as they will apply to other layouts, eg the grid layouts */
+
+/* #container_div {
+    background-color: var(--teal);
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    border: var(--yellow) 2px solid;
+
+    align-items: center;
+    justify-items: center;
+    padding: 2vh 2vw;
+
+
+
+    display: flex;
+    flex-direction: column;
+} */
+
+/* .card_img {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+}
+
+.card_title {
+    font-family: 'poppinsregular', sangs-serif;
+} */
+
+/* .home_title {
     font-family: 'poppinsregular', sans-serif;
     border-bottom: var(--yellow 1px solid);
-}
+} */
 
-h2 {
-    font-size: 2em;
-}
-
-.home_img {
+/* .home_img {
     margin-top: 1vh;
     margin-bottom: 2vh;
 }
 
 .home_text {
     margin: 2vh 2vw;
-}
+} */
