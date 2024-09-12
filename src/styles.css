@@ -203,9 +203,17 @@ footer {
 
 .menu_button:hover {
     background-color: var(--red);
-    border: var(--yellow) 1px solid;
+    border: var(--yellow) 2px solid;
     color: white
 }
+
+#menu_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
+}
+
+/* NEXT, NEED TO WORK OUT 'CARDS' FOR EACH TYPE OF MENU - FOR THE SET, THEN FOR THE OTHER ITEMS. */
+/* BEFORE THIS CAN HAPPEN, NEED TO CREATE SOME DUMMY OR REAL ARRAYS! */
 
 /* .card_img {
     grid-column: 1 / 2;
