@@ -106,15 +106,11 @@ footer {
 
 nav {
     display: flex;
-    /* Ias this needed? */
+    /* Is this needed? */
 }
 
 header {
     height: 10vh;
-}
-
-h1 {
-    font-weight: 800;
 }
 
 button {
@@ -140,10 +136,26 @@ footer {
 }
 
 #content {
-    color: white;
+    color: var(--brown);
     flex-grow: 1;
     padding: 5vh 20vw 5vh 20vw;
 }
+
+#footer_right {
+    display: flex;
+}
+
+.icon {
+    max-height: 3vh;
+    margin-right: 0.5vw;
+    filter: brightness(0) saturate(100%) invert(36%) sepia(52%) saturate(4224%) hue-rotate(334deg) brightness(92%) contrast(97%);
+}
+
+.icon:hover {
+    filter: brightness(0) saturate(100%) invert(48%) sepia(98%) saturate(317%) hue-rotate(123deg) brightness(90%) contrast(86%);
+}
+
+/* The below styles work for the home/about page - some will need to be taken out of #temp_div as they will apply to other layouts, eg the grid layouts */
 
 #temp_div {
     background-color: var(--teal);
@@ -157,7 +169,7 @@ footer {
 
     /* Padding for all types? */
     padding: 2vh 2vw;
-    
+
     /* This grid setup is for the cards - 2 columns */
     /* grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 3fr 1fr; */
@@ -179,8 +191,6 @@ footer {
     font-family: 'poppinsregular', sangs-serif;
 } */
 
-/* Next job is to test the home layout */
-
 .home_title {
     font-family: 'poppinsregular', sans-serif;
     border-bottom: var(--yellow 1px solid);
@@ -197,18 +207,4 @@ h2 {
 
 .home_text {
     margin: 2vh 2vw;
-}
-
-#footer_right {
-    display: flex;
-}
-
-.icon {
-    max-height: 3vh;
-    margin-right: 0.5vw;
-    filter: brightness(0) saturate(100%) invert(36%) sepia(52%) saturate(4224%) hue-rotate(334deg) brightness(92%) contrast(97%);
-}
-
-.icon:hover {
-    filter: brightness(0) saturate(100%) invert(48%) sepia(98%) saturate(317%) hue-rotate(123deg) brightness(90%) contrast(86%);
 }
