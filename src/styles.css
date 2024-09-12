@@ -2,35 +2,145 @@
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-  }
-  * {
+}
+
+* {
     margin: 0;
-  }
-  body {
+}
+
+body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-  }
-  img, picture, video, canvas, svg {
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
     display: block;
     max-width: 100%;
-  }
-  input, button, textarea, select {
-    font: inherit;
-  }
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  #root, #__next {
-    isolation: isolate;
-  }
+}
 
-  /* My CSS: */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* My CSS: */
+
+@font-face {
+    font-family: 'poppinsregular';
+    src: url('src/fonts/poppins-regular-webfont.woff2') format('woff2'),
+        url('src/fonts/poppins-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'merriweatherregular';
+    src: url('src/fonts/merriweather-regular-webfont.woff2') format('woff2'),
+        url('src/fonts/merriweather-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserratthin';
+    src: url('src/fonts/montserrat-variablefont_wght-webfont.woff2') format('woff2'),
+        url('src/fonts/montserrat-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 :root {
     --red: #E63946;
     --teal: #2A9D8F;
-    --golden: #F4A261;
+    --yellow: #FFD700;
     --brown: #4E342E;
 }
+
+body {
+    background-image: url('/src/images/Dark_BG_3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'merriweatherregular', serif;
+}
+
+header,
+footer {
+    background-color: var(--yellow);
+    color: var(--red);
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 1vw 1vh 1vw;
+    align-items: center;
+    font-family: 'poppinsregular', sans-serif;
+}
+
+header {
+    height: 10vh;
+}
+
+footer {
+    justify-self: end;
+    height: 5vh;
+}
+
+#content {
+    color: white;
+    flex-grow: 1;
+    padding: 10vh 20vw 10vh 20vw;
+}
+
+#temp_div {
+    background-color: var(--teal);
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    border: var(--yellow) 2px solid;
+    display: grid;
+
+    /* This grid setup is for the cards */
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr; */
+
+    /* This grid setup is for the Home div */
+    grid-template-rows: 1fr 4fr 1fr;
+}
+
+.card_img {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+}
+
+.card_title {
+    font-family: 'poppinsregular', sans-serif;
+}
+
+/* Next job is to test the home layout */
