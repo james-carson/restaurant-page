@@ -212,29 +212,28 @@ footer {
     grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
 }
 
+#card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    margin: 2vh 2vw;
+}
+
 /* NEXT, NEED TO WORK OUT 'CARDS' FOR EACH TYPE OF MENU - FOR THE SET, THEN FOR THE OTHER ITEMS. */
 /* BEFORE THIS CAN HAPPEN, NEED TO CREATE SOME DUMMY OR REAL ARRAYS! */
+/* ALSO NEED IMAGES FOR EACH DISH! */
 
-/* .card_img {
+
+/* Styling for BOTH the set card and other menu cards: */
+
+.card_img {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
 }
 
 .card_title {
-    font-family: 'poppinsregular', sangs-serif;
-} */
-
-
-
-
-/* These lines go inside container divs for certain grids */
-
-    /* This grid setup is for the cards - 2 columns */
-    /* grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr; */
-
-    /* This grid setup is for the Home div - This would work for the about us section (maybe) */
-    /* grid-template-rows: 1fr 4fr 1fr; */
+    font-family: 'poppinsregular', sans-serif;
+}
 
 
 
@@ -248,13 +247,9 @@ footer {
     width: 100%;
     border-radius: 25px;
     border: var(--yellow) 2px solid;
-
     align-items: center;
     justify-items: center;
     padding: 2vh 2vw;
-
-
-
     display: flex;
     flex-direction: column;
 } */
