@@ -190,6 +190,8 @@ footer {
 }
 
 #menu_title {
+    font-size: 2em;
+    font-family: 'poppinsregular', sans-serif;
     color: white;
 }
 
@@ -261,7 +263,7 @@ footer {
 
 /* The below styles work for the home/about page - some will need to be taken out of #temp_div as they will apply to other layouts, eg the grid layouts */
 
-/* #container_div {
+.container_div {
     background-color: var(--teal);
     height: 100%;
     width: 100%;
@@ -272,7 +274,7 @@ footer {
     padding: 2vh 2vw;
     display: flex;
     flex-direction: column;
-} */
+}
 
 /* .card_img {
     grid-column: 1 / 2;
@@ -283,16 +285,17 @@ footer {
     font-family: 'poppinsregular', sangs-serif;
 } */
 
-/* .home_title {
+.home_title {
     font-family: 'poppinsregular', sans-serif;
+    font-size: 2em;
     border-bottom: var(--yellow 1px solid);
-} */
+}
 
-/* .home_img {
+.home_img {
     margin-top: 1vh;
     margin-bottom: 2vh;
 }
 
 .home_text {
     margin: 2vh 2vw;
-} */
+}
