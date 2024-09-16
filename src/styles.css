@@ -77,6 +77,7 @@ h6 {
 :root {
     --red: #E63946;
     --teal: #2A9D8F;
+    --teal-transparent: rgba(42, 157, 143, 0.8);
     --yellow: #FFD700;
     --brown: #4E342E;
 }
@@ -169,7 +170,7 @@ footer {
 #content {
     color: var(--brown);
     flex-grow: 1;
-    padding: 5vh 20vw 5vh 20vw;
+    padding: 5vh 15vw 5vh 15vw;
 }
 
 /* styling for the menu section */
@@ -177,7 +178,7 @@ footer {
 #menu_div {
     /* Temporary for outlining: */
     /* outline: 1px solid white; */
-    background-color: var(--teal);
+    background-color: var(--teal-transparent);
     height: 100%;
     width: 100%;
     border-radius: 25px;
@@ -207,22 +208,41 @@ footer {
     color: white
 }
 
+/* Need to sort out the column spacing on this part! */
+
 #menu_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(33%, 50%));
 }
+
+/* Styling for the menu cards */
 
 #card {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 3fr 1fr;
-    margin: 2vh 2vw;
+    margin: 1vh 0.5vw;
+    background-color: var(--yellow);
+    outline: #E63946 2px solid;
+    border-radius: 5px;
+    padding: 1vw 1vw;
 }
 
-/* NEXT, NEED TO WORK OUT 'CARDS' FOR EACH TYPE OF MENU - FOR THE SET, THEN FOR THE OTHER ITEMS. */
-/* BEFORE THIS CAN HAPPEN, NEED TO CREATE SOME DUMMY OR REAL ARRAYS! */
-/* ALSO NEED IMAGES FOR EACH DISH! */
+.card_img {
+    margin-right: 1vw;
+}
 
+.card_title {
+    font-size: 1.2em;
+}
+
+.card_text {
+    font-size: 0.7em;
+}
+
+.card_price {
+    text-align: end;
+}
 
 /* Styling for BOTH the set card and other menu cards: */
 
