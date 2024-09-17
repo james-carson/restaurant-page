@@ -109,8 +109,6 @@ export function renderMenuMaster() {
     // Nothing else after here - need to set up other functions.
 }
 
-// Need to ID Menu Div somewhere in these?
-
 export function appendSet() {
     clearDisplay();
     renderMenuMaster();
@@ -136,8 +134,8 @@ export function appendSet() {
         card_img.classList.add('card_img');
         card_img.src = set.set_image;
         card_img.alt = set.set_title;
-        card_img.style.width = '100%';
-        card_img.style.height = 'auto';
+        card_img.style.width = 'auto';
+        card_img.style.height = '100%';
         card_img_div.appendChild(card_img);
 
         // Append the title
@@ -163,18 +161,108 @@ export function appendSet() {
     }
 }
 
-function appendFood() {
+export function appendFood() {
     clearDisplay();
     renderMenuMaster();
 
+    const menu_grid = document.getElementsByClassName('menu_grid')[0];
 
+    for (let i = 0; i < foodSet.length; i++) {
+        const set = foodSet[i];
+        
+        // Append the card
+
+        const card = document.createElement('div');
+        card.classList.add('card');
+        menu_grid.appendChild(card);
+
+        // Append the card image div and then the image itself
+
+        const card_img_div = document.createElement('div');
+        card_img_div.classList.add('card_img_div');
+        card.appendChild(card_img_div);
+
+        const card_img = document.createElement('img');
+        card_img.classList.add('card_img');
+        card_img.src = set.food_image;
+        card_img.alt = set.food_title;
+        card_img.style.width = 'auto';
+        card_img.style.height = '100%';
+        card_img_div.appendChild(card_img);
+
+        // Append the title
+
+        const card_title = document.createElement('div');
+        card_title.classList.add('card_title');
+        card_title.textContent = set.food_title;
+        card.appendChild(card_title);
+
+        // Append the text
+
+        const card_text = document.createElement('div');
+        card_text.classList.add('card_text');
+        card_text.textContent = set.food_text;
+        card.appendChild(card_text);
+
+        // Append the price
+
+        const card_price = document.createElement('div');
+        card_price.classList.add('card_price');
+        card_price.textContent = set.food_price;
+        card.appendChild(card_price);
+    }
 }
 
-function appendDrinks() {
+export function appendDrinks() {
     clearDisplay();
     renderMenuMaster();
 
+    const menu_grid = document.getElementsByClassName('menu_grid')[0];
 
+    for (let i = 0; i < drinksSet.length; i++) {
+        const set = drinksSet[i];
+        
+        // Append the card
+
+        const card = document.createElement('div');
+        card.classList.add('card');
+        menu_grid.appendChild(card);
+
+        // Append the card image div and then the image itself
+
+        const card_img_div = document.createElement('div');
+        card_img_div.classList.add('card_img_div');
+        card.appendChild(card_img_div);
+
+        const card_img = document.createElement('img');
+        card_img.classList.add('card_img');
+        card_img.src = set.drinks_image;
+        card_img.alt = set.drinks_title;
+        card_img.style.width = 'auto';
+        card_img.style.height = '100%';
+        card_img_div.appendChild(card_img);
+
+        // Append the title
+
+        const card_title = document.createElement('div');
+        card_title.classList.add('card_title');
+        card_title.textContent = set.drinks_title;
+        card.appendChild(card_title);
+
+        // Append the text
+
+        const card_text = document.createElement('div');
+        card_text.classList.add('card_text');
+        card_text.textContent = set.drinks_text;
+        card.appendChild(card_text);
+
+        // Append the price
+
+        const card_price = document.createElement('div');
+        card_price.classList.add('card_price');
+        card_price.textContent = set.drinks_price;
+        card.appendChild(card_price);
+    }
 }
 
 function renderContact() {
