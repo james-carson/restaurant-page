@@ -79,7 +79,7 @@ export function renderMenuMaster() {
 
     const menu_buttons = document.createElement('div');
     menu_buttons.classList.add('menu_buttons');
-    menu_div.appendChild.appendChild(menu_buttons);
+    menu_div.appendChild(menu_buttons);
 
     const set_button = document.createElement('button');
     set_button.classList.add('set_button');

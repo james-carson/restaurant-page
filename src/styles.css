@@ -175,9 +175,7 @@ footer {
 
 /* styling for the menu section */
 
-#menu_div {
-    /* Temporary for outlining: */
-    /* outline: 1px solid white; */
+.menu_div {
     background-color: var(--teal-transparent);
     height: 100%;
     width: 100%;
@@ -189,22 +187,24 @@ footer {
     align-items: center;
 }
 
-#menu_title {
+.menu_title {
     font-size: 2em;
     font-family: 'poppinsregular', sans-serif;
     color: white;
 }
 
-#menu_buttons {
+.menu_buttons {
     margin-bottom: 2vh;
 }
 
-#menu_buttons button {
+.menu_buttons button {
     background-color: var(--yellow);
     color: var(--brown);
+    margin-left: 0.25vw;
+    margin-right: 0.25vw;
 }
 
-#menu_buttons button:hover {
+.menu_buttons button:hover {
     background-color: var(--red);
     border: var(--yellow) 2px solid;
     color: white
@@ -212,7 +212,7 @@ footer {
 
 /* Need to sort out the column spacing on this part! */
 
-#menu_grid {
+.menu_grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(33%, 50%));
 }
@@ -257,11 +257,7 @@ footer {
     font-family: 'poppinsregular', sans-serif;
 }
 
-
-
-
-
-/* The below styles work for the home/about page - some will need to be taken out of #temp_div as they will apply to other layouts, eg the grid layouts */
+/* Styles for the home/about page: */
 
 .container_div {
     background-color: var(--teal-transparent);
