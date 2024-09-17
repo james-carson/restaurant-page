@@ -2,10 +2,6 @@ import "./styles.css";
 
 import { clearDisplay, renderHomeAboutUs, renderMenuMaster, appendSet, attachEventListeners } from './functions.js';
 
-import { asamPedasSet, foodSet, drinksSet } from './menu.js';
-
-console.log(asamPedasSet, foodSet, drinksSet);
-
 console.log("Testing, testing, 1, 2, 3!")
 
 window.clearDisplay = clearDisplay;

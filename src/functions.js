@@ -1,6 +1,8 @@
 // This function clears the display, ready for anything else to be added. 
 
-import { asamPedasSet } from "./menu";
+import { asamPedasSet, foodSet, drinksSet } from './menu.js';
+
+console.log(asamPedasSet, foodSet, drinksSet);
 
 export function clearDisplay() {
     const content = document.getElementById('content');
@@ -113,14 +115,16 @@ export function appendSet() {
     clearDisplay();
     renderMenuMaster();
 
+    const menu_grid = document.getElementsByClassName('menu_grid')[0];
+
     for (let i = 0; i < asamPedasSet.length; i++) {
         const set = asamPedasSet[i];
-
+        
         // Append the card
 
         const card = document.createElement('div');
         card.classList.add('card');
-        document.getElementsByClassName('menu_grid').appendChild(card);
+        menu_grid.appendChild(card);
 
         // Append the card image div and then the image itself
 
@@ -130,8 +134,8 @@ export function appendSet() {
 
         const card_img = document.createElement('img');
         card_img.classList.add('card_img');
-        card_img.src = asamPedasSet[i][0];
-        card_img.alt = 'Menu Item Image';
+        card_img.src = set.set_image;
+        card_img.alt = set.set_title;
         card_img.style.width = '100%';
         card_img.style.height = 'auto';
         card_img_div.appendChild(card_img);
@@ -140,21 +144,21 @@ export function appendSet() {
 
         const card_title = document.createElement('div');
         card_title.classList.add('card_title');
-        card_title.textContent = asamPedasSet[i][1];
+        card_title.textContent = set.set_title;
         card.appendChild(card_title);
 
         // Append the text
 
         const card_text = document.createElement('div');
         card_text.classList.add('card_text');
-        card_text.textContent = asamPedasSet[i][2];
+        card_text.textContent = set.set_text;
         card.appendChild(card_text);
 
         // Append the price
 
         const card_price = document.createElement('div');
         card_price.classList.add('card_price');
-        card_price.textContent = asamPedasSet[i][3];
+        card_price.textContent = set.set_price;
         card.appendChild(card_price);
     }
 }
