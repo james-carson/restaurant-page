@@ -1,5 +1,7 @@
 // This function clears the display, ready for anything else to be added. 
 
+import { asamPedasSet } from "./menu";
+
 export function clearDisplay() {
     const content = document.getElementById('content');
     while (content.firstChild) {
@@ -107,19 +109,68 @@ export function renderMenuMaster() {
 
 // Need to ID Menu Div somewhere in these?
 
-function appendSet() {
+export function appendSet() {
     clearDisplay();
     renderMenuMaster();
+
+    for (let i = 0; i < asamPedasSet.length; i++) {
+        const set = asamPedasSet[i];
+
+        // Append the card
+
+        const card = document.createElement('div');
+        card.classList.add('card');
+        document.getElementsByClassName('menu_grid').appendChild(card);
+
+        // Append the card image div and then the image itself
+
+        const card_img_div = document.createElement('div');
+        card_img_div.classList.add('card_img_div');
+        card.appendChild(card_img_div);
+
+        const card_img = document.createElement('img');
+        card_img.classList.add('card_img');
+        card_img.src = asamPedasSet[i][0];
+        card_img.alt = 'Menu Item Image';
+        card_img.style.width = '100%';
+        card_img.style.height = 'auto';
+        card_img_div.appendChild(card_img);
+
+        // Append the title
+
+        const card_title = document.createElement('div');
+        card_title.classList.add('card_title');
+        card_title.textContent = asamPedasSet[i][1];
+        card.appendChild(card_title);
+
+        // Append the text
+
+        const card_text = document.createElement('div');
+        card_text.classList.add('card_text');
+        card_text.textContent = asamPedasSet[i][2];
+        card.appendChild(card_text);
+
+        // Append the price
+
+        const card_price = document.createElement('div');
+        card_price.classList.add('card_price');
+        card_price.textContent = asamPedasSet[i][3];
+        card.appendChild(card_price);
+    }
 }
 
 function appendFood() {
     clearDisplay();
     renderMenuMaster();
+
+
 }
 
 function appendDrinks() {
     clearDisplay();
     renderMenuMaster();
+
+
 }
 
 function renderContact() {
@@ -130,12 +181,12 @@ export function attachEventListeners() {
     document.addEventListener('DOMContentLoaded', (event) => {
         renderHomeAboutUs();
     });
-    
+
     const aboutUsButton = document.getElementById('about_us');
 
     aboutUsButton.addEventListener('click', () => {
         clearDisplay();
         renderHomeAboutUs();
     });
-    
+
 }
