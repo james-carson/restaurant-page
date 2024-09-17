@@ -109,7 +109,7 @@ export function renderMenuMaster() {
     // Nothing else after here - need to set up other functions.
 }
 
-export function appendSet() {
+export function renderSet() {
     clearDisplay();
     renderMenuMaster();
 
@@ -117,7 +117,7 @@ export function appendSet() {
 
     for (let i = 0; i < asamPedasSet.length; i++) {
         const set = asamPedasSet[i];
-        
+
         // Append the card
 
         const card = document.createElement('div');
@@ -161,7 +161,7 @@ export function appendSet() {
     }
 }
 
-export function appendFood() {
+export function renderFood() {
     clearDisplay();
     renderMenuMaster();
 
@@ -169,7 +169,7 @@ export function appendFood() {
 
     for (let i = 0; i < foodSet.length; i++) {
         const set = foodSet[i];
-        
+
         // Append the card
 
         const card = document.createElement('div');
@@ -213,7 +213,7 @@ export function appendFood() {
     }
 }
 
-export function appendDrinks() {
+export function renderDrinks() {
     clearDisplay();
     renderMenuMaster();
 
@@ -221,7 +221,7 @@ export function appendDrinks() {
 
     for (let i = 0; i < drinksSet.length; i++) {
         const set = drinksSet[i];
-        
+
         // Append the card
 
         const card = document.createElement('div');
@@ -267,6 +267,74 @@ export function appendDrinks() {
 
 function renderContact() {
     clearDisplay();
+
+    // Container div for home/about us content
+
+    const container_div = document.createElement('div');
+    container_div.classList.add('container_div');
+    document.getElementById('content').appendChild(container_div);
+
+    // Home Title
+
+    const home_title = document.createElement('div');
+    home_title.classList.add('home_title');
+    home_title.textContent = 'Welcome to our family restaurant!'
+    container_div.appendChild(home_title);
+
+    // Title/Address - top left
+
+    const contact_title = document.createElement('div');
+    contact_title.classList.add('contact_title');
+    container_div.appendChild(contact_title);
+
+    const contact_title_1 = document.createElement('p');
+    contact_title_1.classList.add('contact_title_1');
+    contact_title_1.textContent = 'Warung Asam Pedas Padu - Langkawi'
+    contact_title.appendChild(contact_title_1);
+
+    const contact_title_2 = document.createElement('p');
+    contact_title_2.classList.add('contact_title_1');
+    contact_title_2.textContent = 'No. 19 (12) Kampung Padang Putih, Jalan Pantai Tengah, 07000 Langkawi, Kedah, Malaysia'
+    contact_title.appendChild(contact_title_2);
+
+    // Phone/Email - top right: 2 rows, 2 divs
+
+    const contact_phone_email = document.createElement('div');
+    contact_phone_email.classList.add('contact_phone_email');
+    container_div.appendChild(contact_phone_email);
+
+    const contact_phone = document.createElement('div');
+    contact_phone.classList.add('contact_phone');
+    contact_phone.textContent = '+60 19-677 7086'
+    container_div.appendChild(contact_phone);
+
+    const contact_email = document.createElement('div');
+    contact_email.classList.add('contact_email');
+    contact_email.textContent = 'hello@warungasampedaspadu.com'
+    container_div.appendChild(contact_email);
+
+    // Google Maps embed - no idea if all of those attributes will work!
+
+    const google_maps_div = document.createElement('div');
+    google_maps_div.classList.add('google_maps_div');
+    container_div.appendChild(google_maps_div);
+
+    const google_maps = document.createElement('iframe');
+    google_maps.classList.add('google_maps');
+    google_maps.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31726.219134996652!2d99.7121680621213!3d6.292960448799028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304b87c268ed498b%3A0x66fa32490cae4d66!2sWarung%20Asam%20Pedas%20padu!5e0!3m2!1sen!2sth!4v1726580389838!5m2!1sen!2sth';
+    google_maps.height = '100%';
+    google_maps.width = 'auto';
+    google_maps.style= "border:0;";
+    google_maps.allowfullscreen="";
+    google_maps.loading="lazy";
+    google_maps.referrerpolicy="no-referrer-when-downgrade";
+    google_maps_div.appendChild(google_maps);
+
+    // Next is the form - need to create first
+
+    // Form goes here!
+
+    // Then need to add styling using CSS
 }
 
 export function attachEventListeners() {
