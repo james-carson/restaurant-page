@@ -199,12 +199,12 @@ footer {
     margin-bottom: 2vh;
 }
 
-.menu_button {
+#menu_buttons button {
     background-color: var(--yellow);
     color: var(--brown);
 }
 
-.menu_button:hover {
+#menu_buttons button:hover {
     background-color: var(--red);
     border: var(--yellow) 2px solid;
     color: white

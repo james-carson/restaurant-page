@@ -59,9 +59,53 @@ export function renderHomeAboutUs() {
     home_text_div.appendChild(home_text_3);
 }
 
-function renderMenuMaster() {
+export function renderMenuMaster() {
     clearDisplay();
+
+    // Add menu container div
+
+    const menu_div = document.createElement('div');
+    menu_div.classList.add('menu_div');
+    document.getElementById('content').appendChild(menu_div);
+
+    // Add Menu title
+
+    const menu_title = document.createElement('div');
+    menu_title.classList.add('menu_title');
+    menu_title.textContent = 'Our Menu'
+    menu_div.appendChild(menu_title);
+
+    // Add buttons div + 3 * menu buttons
+
+    const menu_buttons = document.createElement('div');
+    menu_buttons.classList.add('menu_buttons');
+    menu_div.appendChild.appendChild(menu_buttons);
+
+    const set_button = document.createElement('button');
+    set_button.classList.add('set_button');
+    set_button.textContent = 'Signature Sets'
+    menu_buttons.appendChild(set_button);
+
+    const food_button = document.createElement('button');
+    food_button.classList.add('food_button');
+    food_button.textContent = 'Other Dishes'
+    menu_buttons.appendChild(food_button);
+
+    const drinks_button = document.createElement('button');
+    drinks_button.classList.add('drinks_button');
+    drinks_button.textContent = 'Drinks'
+    menu_buttons.appendChild(drinks_button);
+
+    // Add menu grid for different sets to be appended to
+
+    const menu_grid = document.createElement('div');
+    menu_grid.classList.add('menu_grid');
+    menu_div.appendChild(menu_grid);
+
+    // Nothing else after here - need to set up other functions.
 }
+
+// Need to ID Menu Div somewhere in these?
 
 function appendSet() {
     clearDisplay();
