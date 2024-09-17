@@ -214,12 +214,13 @@ footer {
 
 .menu_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(33%, 50%));
+    grid-template-columns: repeat(auto-fill, minmax(30%, 45%));
+    gap: 1vw;
 }
 
 /* Styling for the menu cards */
 
-#card {
+.card {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 3fr 1fr;
@@ -230,7 +231,7 @@ footer {
     padding: 1vw 1vw;
 }
 
-.card_img {
+.card_img_div {
     margin-right: 1vw;
 }
 
@@ -248,7 +249,7 @@ footer {
 
 /* Styling for BOTH the set card and other menu cards: */
 
-.card_img {
+.card_img_div {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
 }
@@ -271,15 +272,6 @@ footer {
     display: flex;
     flex-direction: column;
 }
-
-/* .card_img {
-    grid-column: 1 / 2;
-    grid-row: 1 / -1;
-}
-
-.card_title {
-    font-family: 'poppinsregular', sangs-serif;
-} */
 
 .home_title {
     font-family: 'poppinsregular', sans-serif;
