@@ -264,7 +264,7 @@ footer {
 /* The below styles work for the home/about page - some will need to be taken out of #temp_div as they will apply to other layouts, eg the grid layouts */
 
 .container_div {
-    background-color: var(--teal);
+    background-color: var(--teal-transparent);
     height: 100%;
     width: 100%;
     border-radius: 25px;
@@ -291,11 +291,15 @@ footer {
     border-bottom: var(--yellow 1px solid);
 }
 
-.home_img {
+.home_img_div {
     margin-top: 1vh;
     margin-bottom: 2vh;
 }
 
-.home_text {
+.home_text_div {
     margin: 2vh 2vw;
+}
+
+.home_text_div p {
+    margin-bottom: 1vh;
 }
