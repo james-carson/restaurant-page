@@ -265,7 +265,7 @@ export function renderDrinks() {
     }
 }
 
-function renderContact() {
+export function renderContact() {
     clearDisplay();
 
     // Container div for home/about us content
@@ -330,9 +330,71 @@ function renderContact() {
     google_maps.referrerpolicy="no-referrer-when-downgrade";
     google_maps_div.appendChild(google_maps);
 
-    // Next is the form - need to create first
+    // Next is the form
 
-    // Form goes here!
+    const form_container = document.createElement('form');
+    form_container.classList.add('form_container');
+    form_container.action = "";
+    form_container.method = "post";
+    container_div.appendChild('form_container');
+
+    const form_title = document.createElement('h2');
+    form_title.classList.add('form_title');
+    form_title.textContent = 'Contact Us!';
+    form_container.appendChild('form_title');
+
+    const form_name_label = document.createElement('label');
+    form_name_label.classList.add('form_name_label');
+    form_name_label.for = 'name'
+    form_name_label.textContent = 'Your name:'
+    form_container.appendChild('form_name_label')
+
+    const form_name_input = document.createElement('input');
+    form_name_input.classList.add('form_name_input');
+    form_name_input.type = 'text';
+    form_name_input.name = 'name';
+    form_container.appendChild('form_name_input')
+
+    const form_email_label = document.createElement('label');
+    form_email_label.classList.add('form_email_label');
+    form_email_label.for = 'email'
+    form_email_label.textContent = 'Your email:'
+    form_container.appendChild('form_email_label')
+
+    const form_email_input = document.createElement('input');
+    form_email_input.classList.add('form_email_input');
+    form_email_input.type = 'email';
+    form_email_input.name = 'email';
+    form_container.appendChild('form_email_input')
+
+    const form_phone_label = document.createElement('label');
+    form_phone_label.classList.add('form_phone_label');
+    form_phone_label.for = 'phone'
+    form_phone_label.textContent = 'Your phone no.:'
+    form_container.appendChild('form_phone_label')
+
+    const form_phone_input = document.createElement('input');
+    form_phone_input.classList.add('form_phone_input');
+    form_phone_input.type = 'number';
+    form_phone_input.name = 'phone';
+    form_container.appendChild('form_phone_input')
+
+    const form_message_label = document.createElement('label');
+    form_message_label.classList.add('form_message_label');
+    form_message_label.for = 'message'
+    form_message_label.textContent = 'Your message:'
+    form_container.appendChild('form_message_label')
+
+    const form_message_input = document.createElement('textarea');
+    form_message_input.classList.add('form_message_input');
+    form_message_input.name = 'message';
+    form_container.appendChild('form_message_input')
+
+    const form_button = document.createElement('button');
+    form_button.classList.add('form_button')
+    form_button.type = 'submit'
+    form_button.textContent = 'Submit'
+    form_container.appendChild('form_button')
 
     // Then need to add styling using CSS
 }
@@ -342,11 +404,33 @@ export function attachEventListeners() {
         renderHomeAboutUs();
     });
 
-    const aboutUsButton = document.getElementById('about_us');
+    const menuButton = document.getElementById('menu');
+    menuButton.addEventListener('click', () => {
+        renderSet();
+    })
 
+    const aboutUsButton = document.getElementById('about_us');
     aboutUsButton.addEventListener('click', () => {
-        clearDisplay();
         renderHomeAboutUs();
     });
 
+    const contactButton = document.getElementById('contact');
+    contactButton.addEventListener('click', () => {
+        renderContact();
+    });
+
+    const setButton = document.querySelector('.set_button')
+    setButton.addEventListener('click', () => {
+        renderSet();
+    });
+
+    const foodButton = document.querySelector('.food_button')
+    foodButton.addEventListener('click', () => {
+        renderFood();
+    });
+
+    const drinksButton = document.querySelector('.drinks_button')
+    drinksButton.addEventListener('click', () => {
+        renderDrinks();
+    });
 }
