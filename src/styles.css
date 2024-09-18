@@ -291,3 +291,35 @@ footer {
 .home_text_div p {
     margin-bottom: 1vh;
 }
+
+/* Styles for the contact page: */
+
+.contact_div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 80%;
+
+    /* Which of these do I need? */
+
+    background-color: var(--teal-transparent);
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    border: var(--yellow) 2px solid;
+    align-items: center;
+    justify-items: center;
+    padding: 2vh 2vw;
+    display: flex;
+    flex-direction: column;
+
+    /* Don't go past this - check them! */
+}
+
+.home_title {
+
+}
+
+.contact_title {
+
+}
+

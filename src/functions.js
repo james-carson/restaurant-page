@@ -270,15 +270,15 @@ export function renderContact() {
 
     // Container div for home/about us content
 
-    const container_div = document.createElement('div');
-    container_div.classList.add('container_div');
-    document.getElementById('content').appendChild(container_div);
+    const contact_div = document.createElement('div');
+    contact_div.classList.add('contact_div');
+    document.getElementById('content').appendChild(contact_div);
 
     // Title/Address - top left
 
     const contact_title = document.createElement('div');
     contact_title.classList.add('contact_title');
-    container_div.appendChild(contact_title);
+    contact_div.appendChild(contact_title);
 
     const contact_title_1 = document.createElement('p');
     contact_title_1.classList.add('contact_title_1');
@@ -294,23 +294,23 @@ export function renderContact() {
 
     const contact_phone_email = document.createElement('div');
     contact_phone_email.classList.add('contact_phone_email');
-    container_div.appendChild(contact_phone_email);
+    contact_div.appendChild(contact_phone_email);
 
     const contact_phone = document.createElement('div');
     contact_phone.classList.add('contact_phone');
     contact_phone.textContent = '+60 19-677 7086'
-    container_div.appendChild(contact_phone);
+    contact_div.appendChild(contact_phone);
 
     const contact_email = document.createElement('div');
     contact_email.classList.add('contact_email');
     contact_email.textContent = 'hello@warungasampedaspadu.com'
-    container_div.appendChild(contact_email);
+    contact_div.appendChild(contact_email);
 
     // Google Maps embed - no idea if all of those attributes will work!
 
     const google_maps_div = document.createElement('div');
     google_maps_div.classList.add('google_maps_div');
-    container_div.appendChild(google_maps_div);
+    contact_div.appendChild(google_maps_div);
 
     const google_maps = document.createElement('iframe');
     google_maps.classList.add('google_maps');
@@ -329,7 +329,7 @@ export function renderContact() {
     form_container.classList.add('form_container');
     form_container.action = "";
     form_container.method = "post";
-    container_div.appendChild('form_container');
+    contact_div.appendChild('form_container');
 
     const form_title = document.createElement('h2');
     form_title.classList.add('form_title');
