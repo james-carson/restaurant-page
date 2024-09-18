@@ -134,8 +134,8 @@ export function renderSet() {
         card_img.classList.add('card_img');
         card_img.src = set.set_image;
         card_img.alt = set.set_title;
-        card_img.style.width = 'auto';
-        card_img.style.height = '100%';
+        card_img.style.width = '100%';
+        card_img.style.height = 'auto';
         card_img_div.appendChild(card_img);
 
         // Append the title
@@ -186,8 +186,8 @@ export function renderFood() {
         card_img.classList.add('card_img');
         card_img.src = set.food_image;
         card_img.alt = set.food_title;
-        card_img.style.width = 'auto';
-        card_img.style.height = '100%';
+        card_img.style.width = '100%';
+        card_img.style.height = 'auto';
         card_img_div.appendChild(card_img);
 
         // Append the title
@@ -238,8 +238,8 @@ export function renderDrinks() {
         card_img.classList.add('card_img');
         card_img.src = set.drinks_image;
         card_img.alt = set.drinks_title;
-        card_img.style.width = 'auto';
-        card_img.style.height = '100%';
+        card_img.style.width = '100%';
+        card_img.style.height = 'auto';
         card_img_div.appendChild(card_img);
 
         // Append the title

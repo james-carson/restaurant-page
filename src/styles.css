@@ -216,6 +216,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(30%, 45%));
     gap: 1vw;
+    justify-content: center;
 }
 
 /* Styling for the menu cards */
@@ -223,7 +224,7 @@ footer {
 .card {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 0.5fr;
     margin: 1vh 0.5vw;
     background-color: var(--yellow);
     outline: #E63946 2px solid;
@@ -252,13 +253,6 @@ footer {
 .card_img_div {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
-}
-
-/* Have just put this in to style images - might not work!! ************ */
-
-.card_img_div img {
-    width: 100%;
-    height: auto;
 }
 
 .card_title {
