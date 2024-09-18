@@ -1,8 +1,6 @@
 import "./styles.css";
 
-import { clearDisplay, renderHomeAboutUs, renderMenuMaster, renderSet, renderFood, renderDrinks, renderContact, attachEventListeners } from './functions.js';
-
-console.log("Testing, testing, 1, 2, 3!")
+import { clearDisplay, renderHomeAboutUs, renderMenuMaster, renderSet, renderFood, renderDrinks, renderContact, attachMainButtonListeners, attachMenuButtonListeners } from './functions.js';
 
 window.clearDisplay = clearDisplay;
 window.renderHomeAboutUs = renderHomeAboutUs;
@@ -11,6 +9,7 @@ window.renderSet = renderSet;
 window.renderFood = renderFood;
 window.renderDrinks = renderDrinks;
 window.renderContact = renderContact;
-window.attachEventListeners = attachEventListeners;
+window.attachMainButtonListeners = attachMainButtonListeners;
+window.attachMenuButtonListeners = attachMenuButtonListeners;
 
-attachEventListeners();
+attachMainButtonListeners();

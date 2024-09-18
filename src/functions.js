@@ -106,7 +106,9 @@ export function renderMenuMaster() {
     menu_grid.classList.add('menu_grid');
     menu_div.appendChild(menu_grid);
 
-    // Nothing else after here - need to set up other functions.
+    // Here the event listeners are attached
+
+    attachMenuButtonListeners();
 }
 
 export function renderSet() {
@@ -392,7 +394,7 @@ export function renderContact() {
     form_container.appendChild(form_button)
 }
 
-export function attachEventListeners() {
+export function attachMainButtonListeners() {
     document.addEventListener('DOMContentLoaded', (event) => {
         renderHomeAboutUs();
     });
@@ -412,6 +414,10 @@ export function attachEventListeners() {
         renderContact();
     });
 
+    
+}
+
+export function attachMenuButtonListeners() {
     const setButton = document.querySelector('.set_button')
     setButton.addEventListener('click', () => {
         renderSet();
