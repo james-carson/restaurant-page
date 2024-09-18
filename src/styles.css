@@ -283,6 +283,8 @@ footer {
 .home_img_div {
     margin-top: 1vh;
     margin-bottom: 2vh;
+    display: flex;
+    justify-content: center;
 }
 
 .home_text_div {
