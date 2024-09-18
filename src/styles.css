@@ -296,28 +296,49 @@ footer {
 
 .contact_div {
     display: grid;
+    gap: 1vw;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 20% 80%;
-
-    /* Which of these do I need? */
-
     background-color: var(--teal-transparent);
     height: 100%;
     width: 100%;
     border-radius: 25px;
     border: var(--yellow) 2px solid;
+    padding: 2vh 2vw;
     align-items: center;
     justify-items: center;
-    padding: 2vh 2vw;
-
-    /* Don't go past this - check them! */
-}
-
-.home_title {
-
 }
 
 .contact_title {
-
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    font-size: 1.2em;
 }
 
+.contact_phone_email {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.google_maps_div {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.form_container {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.form_container {
+    display: flex;
+    flex-direction: column;
+    padding: 1vh 1vw;
+}
+
+.contact_div h2 {
+    font-size: 1.5em;
+}

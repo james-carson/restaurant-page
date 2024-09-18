@@ -298,29 +298,31 @@ export function renderContact() {
 
     const contact_phone = document.createElement('div');
     contact_phone.classList.add('contact_phone');
-    contact_phone.textContent = '+60 19-677 7086'
-    contact_div.appendChild(contact_phone);
+    contact_phone.textContent = 'Tel: +60 19-677 7086'
+    contact_phone_email.appendChild(contact_phone);
 
     const contact_email = document.createElement('div');
     contact_email.classList.add('contact_email');
-    contact_email.textContent = 'hello@warungasampedaspadu.com'
-    contact_div.appendChild(contact_email);
+    contact_email.textContent = 'Email: hello@warungasampedaspadu.com'
+    contact_phone_email.appendChild(contact_email);
 
     // Google Maps embed - no idea if all of those attributes will work!
 
     const google_maps_div = document.createElement('div');
     google_maps_div.classList.add('google_maps_div');
+    google_maps_div.style.width = '100%';
+    google_maps_div.style.height = '100%';
     contact_div.appendChild(google_maps_div);
 
     const google_maps = document.createElement('iframe');
     google_maps.classList.add('google_maps');
+    google_maps.style.width = '90%';
+    google_maps.style.height = '90%';
+    google_maps.style.border = '0';
     google_maps.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31726.219134996652!2d99.7121680621213!3d6.292960448799028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304b87c268ed498b%3A0x66fa32490cae4d66!2sWarung%20Asam%20Pedas%20padu!5e0!3m2!1sen!2sth!4v1726580389838!5m2!1sen!2sth';
-    google_maps.height = '100%';
-    google_maps.width = 'auto';
-    google_maps.style= "border:0;";
-    google_maps.allowfullscreen="";
-    google_maps.loading="lazy";
-    google_maps.referrerpolicy="no-referrer-when-downgrade";
+    google_maps.allowfullscreen = "";
+    google_maps.loading = "lazy";
+    google_maps.referrerpolicy = "no-referrer-when-downgrade";
     google_maps_div.appendChild(google_maps);
 
     // Next is the form
@@ -329,67 +331,65 @@ export function renderContact() {
     form_container.classList.add('form_container');
     form_container.action = "";
     form_container.method = "post";
-    contact_div.appendChild('form_container');
+    contact_div.appendChild(form_container);
 
     const form_title = document.createElement('h2');
     form_title.classList.add('form_title');
     form_title.textContent = 'Contact Us!';
-    form_container.appendChild('form_title');
+    form_container.appendChild(form_title);
 
     const form_name_label = document.createElement('label');
     form_name_label.classList.add('form_name_label');
     form_name_label.for = 'name'
     form_name_label.textContent = 'Your name:'
-    form_container.appendChild('form_name_label')
+    form_container.appendChild(form_name_label)
 
     const form_name_input = document.createElement('input');
     form_name_input.classList.add('form_name_input');
     form_name_input.type = 'text';
     form_name_input.name = 'name';
-    form_container.appendChild('form_name_input')
+    form_container.appendChild(form_name_input)
 
     const form_email_label = document.createElement('label');
     form_email_label.classList.add('form_email_label');
     form_email_label.for = 'email'
     form_email_label.textContent = 'Your email:'
-    form_container.appendChild('form_email_label')
+    form_container.appendChild(form_email_label)
 
     const form_email_input = document.createElement('input');
     form_email_input.classList.add('form_email_input');
     form_email_input.type = 'email';
     form_email_input.name = 'email';
-    form_container.appendChild('form_email_input')
+    form_container.appendChild(form_email_input)
 
     const form_phone_label = document.createElement('label');
     form_phone_label.classList.add('form_phone_label');
     form_phone_label.for = 'phone'
     form_phone_label.textContent = 'Your phone no.:'
-    form_container.appendChild('form_phone_label')
+    form_container.appendChild(form_phone_label)
 
     const form_phone_input = document.createElement('input');
     form_phone_input.classList.add('form_phone_input');
     form_phone_input.type = 'number';
     form_phone_input.name = 'phone';
-    form_container.appendChild('form_phone_input')
+    form_container.appendChild(form_phone_input)
 
     const form_message_label = document.createElement('label');
     form_message_label.classList.add('form_message_label');
     form_message_label.for = 'message'
     form_message_label.textContent = 'Your message:'
-    form_container.appendChild('form_message_label')
+    form_container.appendChild(form_message_label)
 
     const form_message_input = document.createElement('textarea');
     form_message_input.classList.add('form_message_input');
     form_message_input.name = 'message';
-    form_container.appendChild('form_message_input')
+    form_container.appendChild(form_message_input)
 
     const form_button = document.createElement('button');
     form_button.classList.add('form_button')
     form_button.type = 'submit'
     form_button.textContent = 'Submit'
-    form_container.appendChild('form_button')
-
-    // Then need to add styling using CSS
+    form_container.appendChild(form_button)
 }
 
 export function attachEventListeners() {
