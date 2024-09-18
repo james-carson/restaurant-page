@@ -309,8 +309,6 @@ footer {
     align-items: center;
     justify-items: center;
     padding: 2vh 2vw;
-    display: flex;
-    flex-direction: column;
 
     /* Don't go past this - check them! */
 }
