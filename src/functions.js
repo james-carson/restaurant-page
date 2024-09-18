@@ -274,13 +274,6 @@ export function renderContact() {
     container_div.classList.add('container_div');
     document.getElementById('content').appendChild(container_div);
 
-    // Home Title
-
-    const home_title = document.createElement('div');
-    home_title.classList.add('home_title');
-    home_title.textContent = 'Welcome to our family restaurant!'
-    container_div.appendChild(home_title);
-
     // Title/Address - top left
 
     const contact_title = document.createElement('div');
