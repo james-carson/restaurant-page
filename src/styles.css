@@ -254,6 +254,13 @@ footer {
     grid-row: 1 / -1;
 }
 
+/* Have just put this in to style images - might not work!! ************ */
+
+.card_img_div img {
+    width: 100%;
+    height: auto;
+}
+
 .card_title {
     font-family: 'poppinsregular', sans-serif;
 }
@@ -296,9 +303,9 @@ footer {
 
 .contact_div {
     display: grid;
-    gap: 1vw;
+    gap: 2vh;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 20% 80%;
+    grid-template-rows: 1fr 4fr;
     background-color: var(--teal-transparent);
     height: 100%;
     width: 100%;
@@ -309,24 +316,55 @@ footer {
     justify-items: center;
 }
 
+.contact_div div,
+.form_container {
+    background-color: var(--yellow);
+    outline: #E63946 2px solid;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+}
+
 .contact_title {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    font-size: 1.2em;
+    font-size: 1em;
+    padding: 1vh 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .contact_phone_email {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.contact_phone_email div {
+    outline: 0;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 1vh 1vw;
+}
+
+.contact_phone {
+    display: flex;
+    align-items: end;
+}
+
+.contact_email {
+    display: flex;
+    align-items: start;
 }
 
 .google_maps_div {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    padding: 0;
 }
+
+/* Next part is here - need to style the form */
 
 .form_container {
     grid-column: 2 / 3;
@@ -336,8 +374,29 @@ footer {
 .form_container {
     display: flex;
     flex-direction: column;
+    justify-content: start;
     padding: 1vh 1vw;
 }
+
+.form_container>* {
+    margin-bottom: 0.5vh;
+}
+
+.form_button {
+    background-color: var(--teal);
+    border: var(--red) 2px solid;
+    color: var(--brown);
+    margin-top: 1vh;
+    width: 50%;
+}
+
+.form_button:hover {
+    background-color: var(--red);
+    border: var(--teal) 2px solid;
+    color: white
+}
+
+/* End of to-do */
 
 .contact_div h2 {
     font-size: 1.5em;

@@ -316,8 +316,8 @@ export function renderContact() {
 
     const google_maps = document.createElement('iframe');
     google_maps.classList.add('google_maps');
-    google_maps.style.width = '90%';
-    google_maps.style.height = '90%';
+    google_maps.style.width = '100%';
+    google_maps.style.height = '100%';
     google_maps.style.border = '0';
     google_maps.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31726.219134996652!2d99.7121680621213!3d6.292960448799028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304b87c268ed498b%3A0x66fa32490cae4d66!2sWarung%20Asam%20Pedas%20padu!5e0!3m2!1sen!2sth!4v1726580389838!5m2!1sen!2sth';
     google_maps.allowfullscreen = "";
