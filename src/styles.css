@@ -83,7 +83,7 @@ h6 {
 }
 
 body {
-    background-image: url('/images/Dark_BG_3.jpg');
+    background-image: url('/src/images/Dark_BG_3.jpg');
     /* background-repeat: no-repeat; */
     background-size: cover;
     display: flex;

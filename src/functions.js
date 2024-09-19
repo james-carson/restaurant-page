@@ -35,7 +35,7 @@ export function renderHomeAboutUs() {
 
     const home_img = document.createElement('img');
     home_img.classList.add('home_img');
-    home_img.src = '/images/Ikan-masak-asam-pedas.jpg';
+    home_img.src = '/src/images/Ikan-masak-asam-pedas.jpg';
     home_img.alt = 'Family Restaurant Image';
     home_img.style.width = '75%';
     home_img.style.height = 'auto';
