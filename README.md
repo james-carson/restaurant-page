@@ -4,6 +4,7 @@ Restaurant Page Project: The Odin Project - Javascript
 Completed 18/9/2024
 
 [Temp - the images don't seem to be attaching on the live preview, even though they have uploaded correctly to GitHub. Looking into this.]
+[UPDATE - see end of text]
 
 I found this quite an enjoyable task that was relatively easy but time-consuming.
 
@@ -16,3 +17,7 @@ The first thing you'll notice is the colour scheme. Colour schemes aren't my are
 The technical side of things weren't too difficult. I approached it by creating a loose model of the first two (home and menu) pages in HTML, applying the CSS, then commenting out the HTML and building and appending it in JS. While this wasn't too difficult, I found it to be very time consuming, appending the elements one by one. Perhaps there's a quicker way, but I am not aware of it. I can see why devs turn to frameworks such as Bootstrap to try to speed things up, despite the possible downsides. There were a few hiccups, such as difficulties appending elements to others defined by class rather than ID, but some research sorted this out quickly.
 
 Overall, it was a relatively easy project that took a surprising amount of time due to it's nature. I enjoyed experimenting with some different colours and with combining both flex and grid displays. I'm looking forward to diving a bit deeper into Javascript next.
+
+UPDATE 19/9/2024:
+
+Ah. I thought I was finished. I figured out why my images weren't showing on GH Pages - they weren't being imported properly in JS after I missed a part of the Webpack page. To do this, I needed to move them all to the src folder (trying to fix without doing this threw lots of errors, so I actually did this last) and import them one by one to a new images.js file, to then use in the menu.js file. I then had to update the other image paths. I'm currently waiting to see if this works, although deployments seem to be a bit behind. Will try to push again, but fingers crossed this worked!
