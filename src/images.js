@@ -55,3 +55,5 @@ export const images = {
   jusOrange: jusOrangeImage,
   jusCarrot: jusCarrotImage
 };
+
+// Add comment for dummy git commit
